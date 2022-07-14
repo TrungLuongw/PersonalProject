@@ -1,0 +1,17 @@
+$primary-color: #00c8ac;
+$middle-primary:#019783;
+$dark-primary:#395a66;
+$background-color:#1c2e35;
+$text-color:#ffffff;
+$blur-color:#f0f0f0;
+
+.Sidebar{
+    position: relative;
+}
+.SideBar-container{
+    width: 16.66%;
+    background-color: $dark-primary;
+    height: 100vh;
+    position: fixed;
+    box-shadow: #395a66dd 0 2px 9px;
+}

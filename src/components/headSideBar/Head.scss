@@ -1,0 +1,19 @@
+$primary-color: #00c8ac;
+$middle-primary:#019783;
+$dark-primary:#395a66;
+$background-color:#1c2e35;
+$text-color:#ffffff;
+$blur-color:#f0f0f0;
+
+.head-sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head-sidebar-icon{
+    margin-right: 7px;
+    color: $primary-color;
+}
+.head-sidebar-title{
+    color: $text-color;
+}

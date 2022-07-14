@@ -1,0 +1,39 @@
+$primary-color: #00c8ac;
+$middle-primary:#019783;
+$dark-primary:#395a66;
+$background-color:#1c2e35;
+$text-color:#ffffff;
+$blur-color:#f0f0f0;
+.category-container{
+    
+}
+.category-header{
+    text-align: center;
+    align-items: center;
+    color: $text-color;
+}
+.category-list{
+    list-style: none;
+    color: $text-color;
+    font-size: 20px;
+    padding: 0;
+}
+.category-item{
+    box-sizing: border-box;
+    padding: 10px 27px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    &:hover{
+        background-color: $background-color;
+        color: $primary-color;
+    }
+}
+.category-active{
+    border-left: 8px solid $primary-color;
+    color: $primary-color;
+    background-color: $dark-primary;
+}
+.category-link{
+    text-decoration: none;
+    color: $text-color;
+}

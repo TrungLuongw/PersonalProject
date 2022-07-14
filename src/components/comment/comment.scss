@@ -1,0 +1,75 @@
+$primary-color: #00c8ac;
+$middle-primary:#019783;
+$dark-primary:#395a66;
+$background-color:#1c2e35;
+$text-color:#ffffff;
+$blur-color:#f0f0f0;
+.comments-container{
+    margin: 0 50px;
+}
+.comments-create h4{
+    color: #ffffff93;
+}
+.comments-create-content{
+    display: flex;
+    align-items: center;
+}
+
+.btn-comment{
+    background-color: $primary-color;
+    transition: color 0.5s;
+    &:hover{
+        background-color: $middle-primary;
+        
+    }
+}
+.comments-description{
+    border-radius: 5px;
+    background-color: rgb(219, 219, 219);
+    &:focus{
+        outline: none;
+        border: 2px solid $primary-color;
+    }
+}
+
+.comment-container{
+    display: flex;
+    align-items: center;
+    color: $text-color;
+    position: relative;
+}
+.comment-user-icon{
+    width: 42px;
+    height: 42px;
+
+}
+.comment-group{
+    margin: 8px 24px ;
+}
+.comment-author{
+    display: flex;
+    margin: 0px 8px;
+    align-items: center;
+}
+.comment-author p{
+    margin:0 24px;
+    color: rgba(255, 255, 255, 0.522);
+
+}
+.comment-content{
+    color:rgba(255, 255, 255, 0.522);
+}
+.comment-btn-remove{
+    position: absolute;
+    right: 0;
+    max-width: 40px;
+    background-color: rgb(151, 57, 57);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.353) 1px 2px 2px;
+    color: $text-color;
+    align-items: center;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(87, 35, 35);
+    }
+}

@@ -1,0 +1,133 @@
+$primary-color: #00c8ac;
+$middle-primary:#019783;
+$dark-primary:#395a66;
+$background-color:#1c2e35;
+$text-color:#ffffff;
+$blur-color:#f0f0f0;
+
+.return-button-icon{
+    width: 50px;
+    height: 50px;
+    color: #ffffff;
+}
+.return-button-container{
+    display: flex;
+    font-size: 20px;
+    color: #ffffff;
+    justify-content: space-evenly;
+    align-items:center;
+    cursor: pointer;
+    &:hover{
+        background-color: #00c8ac;
+    }
+}
+.create-image-container{
+   text-align: center;
+
+}
+.create-image{
+    width: 60%;
+    max-height: 500px;
+}
+
+.create-file-container{
+    width: 30%;
+    box-sizing: border-box;
+    display: flex;
+    align-items:center;
+    
+    
+}
+.create-file-name{
+    color: $text-color;
+    margin-left: 20px;
+}
+.create-file-label{
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $text-color;
+    background-color: $primary-color;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 2px;
+    margin-left: 50px;
+    &:hover{
+        background-color: $middle-primary;
+    }
+}
+.create-file-icon{
+
+}
+.create-input-container{
+    display: flex;
+    flex-direction: column;
+    color:$text-color;
+    margin:0 50px;
+    padding-bottom: 50px;
+    
+}
+.create-input-label{
+    font-size: 18px;
+    font-weight: bold;
+    margin:20px 10px;
+
+}
+.create-input-title{
+    &:focus{
+        outline: none;
+        border-bottom: 4px solid $primary-color;
+    };
+    border: none;
+    border-bottom: 4px solid $middle-primary;
+    font-size: 20px;
+    font-weight: bold;
+    color: $text-color;
+    background-color: $background-color;
+    resize: none;
+}
+.create-group-button{
+    display: flex;
+    align-items: center;
+    
+}
+.create-category-select{
+    min-width: 150px;
+    height: 30px;
+    background-color: $primary-color;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 2px;
+    border: none;
+    border-radius: 3px;
+    color: $text-color;
+    font-size: 16px;
+    cursor: pointer;
+    &:focus{
+        outline: none;
+
+    };
+
+}
+.create-category-option{
+    min-height: 30px;
+    background-color: $primary-color;
+    cursor: pointer;
+}
+.create-public{
+    margin-left: 30%;
+    width: 100px;
+    height: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgb(139, 52, 52);
+    color: $text-color;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.4) 0 2px 2px;
+    border-radius: 3px;
+    cursor: pointer;
+    &:hover{
+        background-color: rgb(230, 100, 100);;
+    }
+
+}
