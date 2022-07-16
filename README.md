@@ -41,17 +41,17 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## App interface
 -Login page
-![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/loginpage.jpg)
+![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/loginpage.jpg?raw=true "Title")
 
 -Home page
-![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/homepage.jpg)
+![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/homepage.jpg?raw=true "Title")
 
 -Detail page
-![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/detailpage.jpg)
-![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/comment.jpg)
+![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/detailpage.jpg?raw=true "Title")
+![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/comment.jpg?raw=true "Title")
 
 -create page
-![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/createpage.jpg)
+![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/createpage.jpg?raw=true "Title")
 
 ## Learn More
 
