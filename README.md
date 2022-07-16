@@ -41,10 +41,10 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## App interface
 -Login page
-![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/loginpage.jpg?raw=true "Title")
+![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/loginpage.jpg?raw=true "Title")
 
 -Home page
-![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/homepage.jpg?raw=true "Title")
+![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/homepage.jpg?raw=true "Title")
 
 -Detail page
 ![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/detailpage.jpg?raw=true "Title")
