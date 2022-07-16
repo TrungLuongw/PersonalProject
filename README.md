@@ -47,11 +47,11 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 ![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/homepage.jpg?raw=true "Title")
 
 -Detail page
-![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/detailpage.jpg?raw=true "Title")
-![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/comment.jpg?raw=true "Title")
+![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/detailpage.jpg?raw=true "Title")
+![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/comment.jpg?raw=true "Title")
 
 -create page
-![alt text](https://github.com/TrungLuongw/PersonalProject/tree/Blog-web-server/static/images/createpage.jpg?raw=true "Title")
+![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/createpage.jpg?raw=true "Title")
 
 ## Learn More
 
