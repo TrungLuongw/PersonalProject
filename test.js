@@ -1,1 +1,6 @@
-console.log(new Date("2022-07-11T16:31:29.450Z").toDateString());
+var a = [1, 5, 2, 4];
+var b = [5, 2, 1, 4];
+
+if (a > b) console.log("a>b");
+if (a < b) console.log("a<b");
+if (a == b) console.log("a=b");

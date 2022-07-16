@@ -7,7 +7,7 @@ const postController = {
     try {
       let posts;
       if (!category || category == "ALL") {
-        posts = await postModel.find({});
+        posts = await postModel.find({}).sort({ createdAt: -1 });
       } else {
         posts = await postModel.find({ category: category });
       }

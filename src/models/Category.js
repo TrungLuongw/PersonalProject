@@ -8,6 +8,7 @@ const Category = new Schema(
     },
     name: {
       type: String,
+      default: "ALL",
       required: true,
     },
   },
