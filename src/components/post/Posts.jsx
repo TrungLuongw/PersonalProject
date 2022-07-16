@@ -34,6 +34,7 @@ const Posts = () => {
             columnSpacing={2}
             rowSpacing={4}
             marginTop={1}
+            style={{ width: '99.5%' }}
         >
             <Grid item lg={12} sm={12} xs={12}>
                 <Search posts={posts} setShowPosts={setShowPosts} />

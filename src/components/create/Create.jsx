@@ -18,7 +18,7 @@ const ReturnButton = () => {
     return (
         <div className="return-button-container" onClick={() => handleReturn()}>
             <KeyboardReturnIcon className="return-button-icon" />
-            Return
+            Home
         </div>
     );
 };

@@ -15,3 +15,9 @@ $blur-text-color:#f0f0f0;
     position: fixed;
     box-shadow: #395a66dd 0 2px 9px;
 }
+@media (max-width:599px) {
+    .SideBar-container{
+        display: none;
+    }
+    
+}

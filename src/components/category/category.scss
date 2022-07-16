@@ -23,6 +23,7 @@ $blur-text-color:#f0f0f0;
     padding: 10px 27px;
     cursor: pointer;
     transition-duration: 0.2s;
+    overflow: hidden;
     &:hover{
         background-color: $background-color;
         color: $primary-color;

@@ -37,6 +37,8 @@ $blur-text-color:#1c2e35ad;
     align-items: center;
     color: $text-color;
     position: relative;
+    border-left: 6px solid $dark-primary;
+    margin: 5px;
 }
 .comment-user-icon{
     width: 42px;
@@ -58,6 +60,10 @@ $blur-text-color:#1c2e35ad;
 }
 .comment-content{
     color:$text-color;
+    word-break: break-all;
+    padding-right: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 .comment-btn-remove{
     position: absolute;

@@ -8,10 +8,16 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     return (
         <Grid container spacing={8} className="home-container">
-            <Grid item lg={2} sm={2} xs={2} className="Sidebar">
+            <Grid item lg={2} sm={2} xs={0} className="Sidebar">
                 <SideBar child={<Categories />} />
             </Grid>
-            <Grid item lg={10} sm={10} xs={10}>
+            <Grid
+                item
+                lg={10}
+                sm={10}
+                xs={12}
+                style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+            >
                 <Posts />
                 <Link to={'/create'}>
                     <button className="btn-create">
