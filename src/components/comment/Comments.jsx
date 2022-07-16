@@ -1,5 +1,5 @@
 import './comment.scss';
-import { useEffect, useState, useContext } from 'react';
+import { useEffect, useState, useContext, useRef } from 'react';
 import * as commentService from '../../services/commentService';
 import { accountData } from '../../context/DataProvider';
 import Comment from './Comment';
@@ -14,10 +14,9 @@ const initCommentEmpty = {
 const Comments = () => {
     const [comments, setComments] = useState([]);
     const [comment, setComment] = useState(initCommentEmpty);
-    const [error, setError] = useState('');
     const { account } = useContext(accountData);
     const { id } = useParams();
-    const [toggle, setToggle] = useState(false);
+    const refreshComment = useRef('');
     useEffect(() => {
         async function fetchData() {
             try {
@@ -30,9 +29,27 @@ const Comments = () => {
                 console.log(error);
             }
         }
-        fetchData();
-    }, [toggle]);
-
+        refreshComment.current = setInterval(fetchData, 10000);
+        return () => {
+            if (refreshComment.current) {
+                clearInterval(refreshComment.current);
+            }
+        };
+    }, []);
+    useEffect(() => {
+        handleToggle();
+    }, []);
+    const handleToggle = async () => {
+        try {
+            const response = await commentService.get(id);
+            console.log(response);
+            if (response.isSuccess) {
+                setComments(response.data);
+            }
+        } catch (error) {
+            console.log(error);
+        }
+    };
     const handleInputChange = (e) => {
         setComment({
             ...comment,
@@ -47,7 +64,7 @@ const Comments = () => {
             try {
                 const res = await commentService.post(comment);
                 if (res.isSuccess) {
-                    setToggle(!toggle);
+                    handleToggle();
                     setComment(initCommentEmpty);
                 }
             } catch (error) {
@@ -78,7 +95,7 @@ const Comments = () => {
             </div>
             <div>
                 {comments.map((item) => (
-                    <Comment setToggle={setToggle} toggle={toggle} comment={item} key={item._id} />
+                    <Comment handleToggle={handleToggle} comment={item} key={item._id} />
                 ))}
             </div>
         </div>

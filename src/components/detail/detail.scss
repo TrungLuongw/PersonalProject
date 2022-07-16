@@ -1,9 +1,9 @@
 $primary-color: #00c8ac;
 $middle-primary:#019783;
-$dark-primary:#395a66;
-$background-color:#1c2e35;
-$text-color:#ffffff;
-$blur-color:#f0f0f0;
+$dark-primary:#31394c;
+$background-color:#eaebed;
+$text-color:#1c2e35;
+$blur-text-color:#1c2e35ad;
 
 .return-button-icon{
     width: 50px;
@@ -71,24 +71,25 @@ $blur-color:#f0f0f0;
     
 }
 .detail-input-label{
+    color: $blur-text-color;
     font-size: 18px;
     font-weight: bold;
     margin:20px 10px;
 
 }
-.detail-input-title{
-    &:focus{
-        outline: none;
-        border-bottom: 4px solid $primary-color;
-    };
+.detail-input-description{
     border: none;
-    border-bottom: 4px solid $middle-primary;
     font-size: 20px;
     font-weight: bold;
     color: $text-color;
     background-color: $background-color;
     resize: none;
-    background-color: #395a6619;
+    white-space: pre-wrap;
+    
+}
+.detail-input-title{
+    text-align: center;
+    font-size: 50px;
 }
 .detail-group-button{
     display: flex;
@@ -151,18 +152,18 @@ $blur-color:#f0f0f0;
     margin-left: 30%;
 }
 .detail-btn-edit{
-    background-color: rgb(10, 137, 10);
+    background-color: rgb(30, 215, 30);
     transition: color 0.5s;
     &:hover{
-        background-color: rgb(23, 165, 23);
+        background-color: rgb(22, 128, 22);
         
     }
 }
 .detail-btn-remove{
-    background-color: rgb(139, 52, 52);
+    background-color: rgb(219, 90, 90);
     transition: color 0.5s;
     &:hover{
-        background-color: rgb(183, 68, 68);
+        background-color: rgb(132, 51, 51);
         
     }
 }

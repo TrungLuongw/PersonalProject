@@ -1,6 +1,5 @@
 import './App.scss';
 import { Routes, Route, BrowserRouter, Navigate, Outlet } from 'react-router-dom';
-import Intro from './components/intro/intro';
 import Account from './components/account/account';
 import { useEffect, useState } from 'react';
 import Home from './components/home/Home';

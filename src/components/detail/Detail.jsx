@@ -43,7 +43,6 @@ const Detail = () => {
         async function fetchData() {
             const res = await postService.getPost(id);
             if (res.isSuccess) {
-                console.log(res.data);
                 setPost(res.data);
             }
         }
@@ -99,25 +98,9 @@ const Detail = () => {
                     )}
                 </div>
                 <div className="detail-input-container">
-                    <label className="detail-input-label">Title</label>
-                    <input
-                        className="detail-input-title"
-                        type="text"
-                        name="title"
-                        id="title"
-                        value={post.title}
-                        placeholder="your title"
-                        readOnly={true}
-                    />
+                    <h1 className="detail-input-title">{post.title}</h1>
                     <label className="detail-input-label">Description</label>
-                    <textarea
-                        className="detail-input-title"
-                        cols={120}
-                        rows={16}
-                        placeholder="Type your content"
-                        readOnly={true}
-                        value={post.description}
-                    ></textarea>
+                    <p className="detail-input-description">{post.description}</p>
                 </div>
                 <Comments postId={post._id} />
             </Grid>

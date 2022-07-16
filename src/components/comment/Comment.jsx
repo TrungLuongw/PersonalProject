@@ -3,13 +3,13 @@ import { accountData } from '../../context/DataProvider';
 import { useContext } from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
 import * as commentService from '../../services/commentService';
-const Comment = ({ comment, setToggle, toggle }) => {
+const Comment = ({ comment, handleToggle }) => {
     const { account } = useContext(accountData);
     const handleRemoveComment = async () => {
         try {
             const res = await commentService.remove(comment._id);
             if (res.isSuccess) {
-                setToggle(!toggle);
+                handleToggle();
             }
         } catch (error) {
             console.log(error);

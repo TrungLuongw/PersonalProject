@@ -1,14 +1,14 @@
 $primary-color: #00c8ac;
 $middle-primary:#019783;
-$dark-primary:#395a66;
-$background-color:#1c2e35;
-$text-color:#ffffff;
-$blur-color:#f0f0f0;
+$dark-primary:#31394c;
+$background-color:#eaebed;
+$text-color:#1c2e35;
+$blur-text-color:#1c2e35ad;
 .comments-container{
     margin: 0 50px;
 }
 .comments-create h4{
-    color: #ffffff93;
+    color: $blur-text-color;
 }
 .comments-create-content{
     display: flex;
@@ -53,11 +53,11 @@ $blur-color:#f0f0f0;
 }
 .comment-author p{
     margin:0 24px;
-    color: rgba(255, 255, 255, 0.522);
+    color: $text-color;
 
 }
 .comment-content{
-    color:rgba(255, 255, 255, 0.522);
+    color:$text-color;
 }
 .comment-btn-remove{
     position: absolute;

@@ -11,7 +11,7 @@ const Home = () => {
             <Grid item lg={2} sm={2} xs={2} className="Sidebar">
                 <SideBar child={<Categories />} />
             </Grid>
-            <Grid item lg={10} sm={10} xs={10} style={{ position: 'relative' }}>
+            <Grid item lg={10} sm={10} xs={10}>
                 <Posts />
                 <Link to={'/create'}>
                     <button className="btn-create">
