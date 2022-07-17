@@ -1,4 +1,4 @@
-##Clone project from a specific Branch
+## Clone project from a specific Branch
  -git clone --branch `<branchname> <remote-repo-url>`
 # Getting Started with Create React App
 
