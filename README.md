@@ -40,18 +40,19 @@ Instead, it will copy all the configuration files and the transitive dependencie
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
 ## App interface
+
 #-Login page
-![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/loginpage.jpg?raw=true "Title")
+![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/loginpage.jpg?raw=true 'Title')
 
 #-Home page
-![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/homepage.jpg?raw=true "Title")
+![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/homepagee.jpg?raw=true 'Title')
 
 #-Detail page
-![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/detailpage.jpg?raw=true "Title")
-![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/comment.jpg?raw=true "Title")
+![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/detailpage.jpg?raw=true 'Title')
+![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/comment.jpg?raw=true 'Title')
 
 #-create page
-![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/createpage.jpg?raw=true "Title")
+![alt text](https://github.com/TrungLuongw/PersonalProject/blob/Blog-web-server/static/images/createpage.jpg?raw=true 'Title')
 
 ## Learn More
 

@@ -1,5 +1,5 @@
 import './post.scss';
-import { cutString } from '../../contants/helper';
+import { cutString, calculatorTimeStamp } from '../../contants/helper';
 import { accountData } from '../../context/DataProvider';
 import { useContext } from 'react';
 import { API_IMAGE } from '../../contants/initValue';
@@ -15,6 +15,12 @@ const Post = ({ child }) => {
             <div className="post-item-group">
                 <h2 className="post-item-title">{cutString(child.title, 20)}</h2>
                 <p className="post-item-description">{cutString(child.description, 100)}</p>
+            </div>
+            <div className="post-item-timestamp-container">
+                <div className="post-item-timestamp-group">
+                    <p>{calculatorTimeStamp(child.createdAt)}</p>
+                    <div className="timestamp"></div>
+                </div>
             </div>
         </div>
     );

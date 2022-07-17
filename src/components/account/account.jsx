@@ -30,7 +30,6 @@ const Account = ({ setLogin }) => {
     }, [status]);
     useEffect(() => {
         async function refresh() {
-            console.log('co token khong can dang nhap');
             const res = await accountService.refreshToken();
             if (res.isSuccess) {
                 setLogin(true);
@@ -49,7 +48,6 @@ const Account = ({ setLogin }) => {
         setStatus((prev) => !prev);
     };
     const handleChangeInput = (e) => {
-        console.log(loginInput);
         setLoginInput((prev) => ({ ...prev, [e.target.name]: e.target.value }));
     };
     const handleLogin = async () => {

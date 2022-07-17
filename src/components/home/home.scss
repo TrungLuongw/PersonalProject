@@ -28,3 +28,34 @@ $blur-text-color:#f0f0f0;
         background-color: $dark-primary;
     }
 }
+.home-user-container h4{
+    margin: 0 10px;
+
+}
+.home-user-container{
+    position: absolute;
+    top: 52px;
+    right: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #455a64;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    &:hover{
+        background-color: rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+    }
+}
+@media (max-width:1023px)and (min-width:376px){
+    .home-user-container{
+        top: 0;
+        right: auto;
+    }
+}
+@media (max-width:375px){
+    .home-user-container{
+        top:12px;
+        right: auto;
+    }
+}

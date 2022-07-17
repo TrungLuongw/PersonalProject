@@ -3,6 +3,7 @@ import { accountData } from '../../context/DataProvider';
 import { useContext } from 'react';
 import DeleteIcon from '@mui/icons-material/Delete';
 import * as commentService from '../../services/commentService';
+import { calculatorTimeStamp } from '../../contants/helper';
 const Comment = ({ comment, handleToggle }) => {
     const { account } = useContext(accountData);
     const handleRemoveComment = async () => {
@@ -21,7 +22,7 @@ const Comment = ({ comment, handleToggle }) => {
             <AccountCircleIcon className="comment-user-icon" />
             <div className="comment-group">
                 <label className="comment-author">
-                    {comment.name} <p>{new Date(comment.createdAt).toDateString()}</p>
+                    {comment.name} <p>{calculatorTimeStamp(comment.createdAt)}</p>
                 </label>
                 <p className="comment-content">{comment.comment}</p>
             </div>
