@@ -3,7 +3,11 @@ import upload from "../../utils/upload.js";
 import { auth } from "../middleware/validAccount.js";
 import multer from "multer";
 const router = express.Router();
-router.post("/", auth, upload.single("file"), (req, res, next) => {
+
+//use midleware
+router.use(auth);
+
+router.post("/", upload.single("file"), (req, res, next) => {
   if (req.fileValidationError) {
     return res.status(403).json({ msg: req.fileValidationError });
   } else if (!req.file) {

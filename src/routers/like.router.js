@@ -3,8 +3,10 @@ import likeController from "../controllers/like.js";
 import { auth } from "../middleware/validAccount.js";
 
 const router = express.Router();
-router.get("/:postId", auth, likeController.getLikes);
-router.post("/", auth, likeController.publicLike);
-router.delete("/:id", auth, likeController.deleteLike);
+router.use(auth);
+
+router.get("/:postId", likeController.getLikes);
+router.post("/", likeController.publicLike);
+router.delete("/:id", likeController.deleteLike);
 
 export default router;

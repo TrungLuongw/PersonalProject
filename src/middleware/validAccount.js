@@ -2,7 +2,7 @@ import Account from "../models/Account.js";
 import jwt from "jsonwebtoken";
 
 export const auth = async (req, res, next) => {
-  if (!req.headers["authorization"].startsWith("Bearer")) {
+  if (!String(req.headers["authorization"]).startsWith("Bearer")) {
     return res.status(401).json({ msg: "please log in to get access token!" });
   }
   const authHeader = req.headers["authorization"];
