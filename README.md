@@ -1,3 +1,5 @@
+#Clone project from a specific Branch
+git clone --branch `<branchname> <remote-repo-url>`
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
