@@ -12,19 +12,21 @@ const commentController = {
       }
       return res.status(200).json(comments);
     } catch (error) {
-      return res.status(500).json({ error: error.message });
+      return next(error);
     }
   },
   publicComment: async (req, res, next) => {
     try {
       const comment = await new commentModel(req.body);
       if (!comment) {
-        return res.status(400).json({ msg: "Invalid input." });
+        const error = new Error("Invalid input.");
+        error.statusCode = 400;
+        return next(error);
       }
       comment.save();
       return res.status(200).json({ msg: "Comment saved successfully." });
     } catch (error) {
-      return res.status(500).json({ error: err.message });
+      return next(error);
     }
   },
   deleteComment: async (req, res, next) => {
@@ -33,11 +35,13 @@ const commentController = {
     try {
       const comment = await commentModel.findOneAndDelete({ _id: id });
       if (!comment) {
-        return res.status(404).json({ msg: "No comments found." });
+        const error = new Error("No comments found.");
+        error.statusCode = 404;
+        return next(error);
       }
       return res.status(200).json({ msg: "Comment deleted successfully." });
     } catch (error) {
-      return res.status(500).json({ error: err.message });
+      return next(error);
     }
   },
 };

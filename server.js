@@ -10,6 +10,7 @@ import postRouter from "./src/routers/post.router.js";
 import commentRouter from "./src/routers/comment.router.js";
 import likeRouter from "./src/routers/like.router.js";
 import uploadRouter from "./src/routers/upload.router.js";
+import errorHandle from "./src/middleware/errorHandle.js";
 dotenv.config();
 
 const app = express();
@@ -28,6 +29,12 @@ app.use("/category", categoryRouter);
 app.use("/post", postRouter);
 app.use("/comment", commentRouter);
 app.use("/like", likeRouter);
+app.all("*", (req, res, next) => {
+  const err = new Error("The route can not found");
+  err.statusCode = 404;
+  next(err);
+});
+app.use(errorHandle);
 app.listen(PORT, () => {
   console.log("server is listening on port " + PORT);
 });

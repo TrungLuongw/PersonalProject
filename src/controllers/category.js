@@ -5,7 +5,7 @@ const categoryControllers = {
       const categories = await categoryModel.find({}).sort({ name: 1 });
       return res.status(200).json(categories);
     } catch (error) {
-      return res.status(500).json({ error: error.message });
+      return next(error);
     }
   },
   post: async (req, res, next) => {

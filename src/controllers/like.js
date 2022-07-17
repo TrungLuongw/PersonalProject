@@ -7,7 +7,7 @@ const likeController = {
       const likes = await likeModel.find({ postId: postId });
       return res.status(200).json(likes);
     } catch (error) {
-      return res.status(500).json({ error: error.message });
+      return next(error);
     }
   },
   publicLike: async (req, res, next) => {
@@ -20,7 +20,9 @@ const likeController = {
       if (!oldLike) {
         const like = await new likeModel(req.body);
         if (!like) {
-          return res.status(400).json({ msg: "Invalid input." });
+          const error = new Error("Invalid input.");
+          error.statusCode = 400;
+          return next(error);
         }
         like.save();
         return res.status(200).json({ msg: "Liked successfully." });
@@ -29,7 +31,7 @@ const likeController = {
         return res.status(200).json({ msg: "Remove Like successfully." });
       }
     } catch (error) {
-      return res.status(500).json({ error: err.message });
+      return next(error);
     }
   },
   deleteLike: async (req, res, next) => {
@@ -37,12 +39,13 @@ const likeController = {
     try {
       const like = await likeModel.findOneAndDelete({ _id: id });
       if (!like) {
-        return res.status(404).json({ msg: "Not exits" });
+        const error = new Error("favorite not exist");
+        error.statusCode = 404;
+        return next(error);
       }
       return res.status(200).json({ msg: "remove successfully." });
     } catch (error) {
-      console.log(error);
-      return res.status(500).json({ error: err.message });
+      return next(error);
     }
   },
 };

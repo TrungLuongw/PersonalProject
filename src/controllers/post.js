@@ -14,20 +14,20 @@ const postController = {
 
       return res.status(200).json(posts);
     } catch (error) {
-      console.log(error);
-      return res.status(500).json({ error: error.message });
+      return next(error);
     }
   },
   getPost: async (req, res, next) => {
     try {
       const post = await postModel.findOne({ _id: req.params.id });
       if (!post) {
-        return res.status(404).json({ msg: "No post found" });
+        const error = new Error("Post not found ");
+        error.statusCode = 404;
+        return next(error);
       }
       return res.status(200).json(post);
     } catch (error) {
-      console.log(error);
-      return res.status(500).json({ error: error.message });
+      return next(error);
     }
   },
   publicPost: async (req, res, next) => {
@@ -36,8 +36,7 @@ const postController = {
       post.save();
       return res.status(200).json(post);
     } catch (error) {
-      console.log(error);
-      return res.status(500).json({ error: error.message });
+      return next(error);
     }
   },
   putPost: async (req, res, next) => {
@@ -48,24 +47,26 @@ const postController = {
         { $set: req.body }
       );
       if (!post) {
-        return res.status(404).json({ msg: "Post not found" });
+        const error = new Error("Post not found");
+        error.statusCode = 404;
+        return next(error);
       }
       return res.status(200).json({ msg: "post updated successfully" });
     } catch (error) {
-      console.log(error);
-      return res.status(500).json({ error: error.message });
+      return next(error);
     }
   },
   deletePost: async (req, res, next) => {
     try {
       const post = await postModel.findOneAndDelete({ _id: req.params.id });
       if (!post) {
-        return res.status(404).json({ msg: "Post not found" });
+        const error = new Error("Post not found ");
+        error.statusCode = 404;
+        return next(error);
       }
       return res.status(200).json({ msg: "post deleted successfully" });
     } catch (error) {
-      console.log(error);
-      return res.status(500).json({ error: error.message });
+      return next(error);
     }
   },
 };

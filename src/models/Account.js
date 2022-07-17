@@ -14,6 +14,7 @@ const Account = new Schema(
     },
     name: {
       type: String,
+      unique: true,
       required: true,
     },
     token: {

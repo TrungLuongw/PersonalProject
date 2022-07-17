@@ -12,8 +12,7 @@ const accountController = {
 
       return res.status(200).json(newAccount);
     } catch (error) {
-      console.log(error);
-      return res.status(500).json({ error: error.message });
+      return next(error);
     }
   },
   signin: async (req, res, next) => {
@@ -23,7 +22,9 @@ const accountController = {
       console.log(username, password);
       const account = await accountModel.findOne({ username: username });
       if (!account) {
-        return res.status(404).json({ error: "Account not exits" });
+        const error = new Error("Account  not exits");
+        error.statusCode = 404;
+        return next(error);
       }
       if (await bcrypt.compare(password, account.password)) {
         const accessToken = jwt.sign(
@@ -50,19 +51,21 @@ const accountController = {
           username: account.username,
         });
       } else {
-        return res.status(403).json({ msg: "password wrong" });
+        const error = new Error("incorrect password");
+        error.statusCode = 403;
+        return next(error);
       }
     } catch (error) {
       console.log(error);
-      return res.status(500).json({ error: error.message });
+      next(error);
     }
   },
   refresh: async (req, res, next) => {
     const refreshToken = req.headers["authorization"].split(" ")[1];
     if (!refreshToken) {
-      return res
-        .status(404)
-        .json({ msg: "refresh token is required for authentication" });
+      const error = new Error("refresh token is required for authentication");
+      error.statusCode = 404;
+      return next(error);
     }
     try {
       console.log(refreshToken + "ii");
@@ -71,7 +74,9 @@ const accountController = {
         process.env.REFRESH_TOKEN
       );
       if (!decoded) {
-        return res.status(401).json({ msg: "Invalid token" });
+        const error = new Error("Invalid token");
+        error.statusCode = 401;
+        return next(error);
       }
       const account = await accountModel.findOne({
         username: decoded.username,
@@ -99,10 +104,7 @@ const accountController = {
         username: account.username,
       });
     } catch (error) {
-      // console.log(error);
-      if (error.name == "JsonWebTokenError")
-        return res.status(401).json({ msg: "Invalid token" });
-      return res.status(500).json({ error: error.message });
+      return next(error);
     }
   },
 };

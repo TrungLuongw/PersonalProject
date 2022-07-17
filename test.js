@@ -1,6 +1,7 @@
-var a = [1, 5, 2, 4];
-var b = [5, 2, 1, 4];
-
-if (a > b) console.log("a>b");
-if (a < b) console.log("a<b");
-if (a == b) console.log("a=b");
+const a = {
+  name: "trung",
+  age: 123,
+};
+for (let i in a) {
+  console.log(i, a[i]);
+}
